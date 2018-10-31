@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">恋爱公开课</string>
+    <string name="title_activity_lc_main">LcMain</string>
+    <string name="action_settings">Settings</string>
+</resources>
