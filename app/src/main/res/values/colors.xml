@@ -7,4 +7,6 @@
     <color name="front_input">#868686</color>
     <color name="front_blue">#45c018</color>
     <color name="main_theme">#45c018</color>
+    <color name="main_title">#21292b</color>
+    <color name="front_white">#FFFFFF</color>
 </resources>
