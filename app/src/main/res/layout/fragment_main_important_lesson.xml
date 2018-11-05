@@ -76,20 +76,36 @@
                 android:gravity="center"
                 android:text="@string/free"
                 android:textColor="@drawable/main_top_text_color"
-                android:textSize="15sp"
-                android:visibility="gone"/>
+                android:textSize="15sp"/>
             <RadioButton
                 android:id="@+id/rb_important_new"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_top_selecter1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/last_class"
+                android:textColor="@drawable/main_top_text_color"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/rb_important_tutor"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_top_selecter2"
                 android:button="@null"
                 android:gravity="center"
-                android:text="@string/last_class"
+                android:text="@string/daoshipaihang"
                 android:textColor="@drawable/main_top_text_color"
                 android:textSize="15sp"/>
         </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rgImportant_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
     </LinearLayout>
 
 </FrameLayout>
