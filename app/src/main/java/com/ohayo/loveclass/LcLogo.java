@@ -8,30 +8,27 @@ import android.view.Window;
 
 public class LcLogo extends AppCompatActivity {
 
-    private Handler mhandler;
+    private Handler mhandler = new Handler();;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_lc_logo);
-
-        initPath();
+        mhandler.postDelayed(mRunnable, 2000);
     }
 
-    public void initPath() {
-        mhandler = new Handler();
-        new Thread() {
-            @Override
-            public void run() {
-                mhandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        startActivity(new Intent(LcLogo.this, LcMain.class));
-                        finish();
-                    }
-                }, 2000);
-            }
-        }.start();
+    private Runnable mRunnable = new Runnable() {
+        @Override
+        public void run() {
+            startActivity(new Intent(LcLogo.this, LcMain.class));
+            finish();
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        mhandler.removeCallbacksAndMessages(null);
+        super.onDestroy();
     }
 }
